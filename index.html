@@ -88,7 +88,7 @@
         var length = line.length
         if (length) {
           var width = window.innerWidth / length
-          element.style.fontSize = (width * 2) + 'px'
+          element.style.fontSize = Math.floor(width) + 'px'
         } else {
           element.style.fontSize = 'inherit'
         }
