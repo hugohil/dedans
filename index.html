@@ -71,12 +71,8 @@
             setTimeout(function () {
               var replay = document.createElement('button')
               replay.textContent = 'replay'
-              replay.className = 'animated fadeInUp'
               replay.addEventListener('click', function (event) {
-                replay.className = 'animated fadeOutUp'
-                setTimeout(function () {
-                  read(text)
-                }, 1000)
+                read(text)
               })
               document.querySelector('.container').appendChild(replay)
             }, 100 * i)
