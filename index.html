@@ -39,7 +39,7 @@
     <script type="text/javascript">
       var container = document.querySelector('.container')
 
-      ;(function init (){
+      ;(function init () {
         var req = new window.XMLHttpRequest()
         req.open('GET', '#/', true)
         req.onreadystatechange = function (state) {
@@ -56,12 +56,12 @@
       })()
 
       function read (text) {
-        if(!text.length) {
+        if (!text.length) {
           return false
         }
-        splitted = text.split(/\n/)
+        var splitted = text.split(/\n/)
         for (var i = 0; i < splitted.length + 1; i++) {
-          if(i < splitted.length){
+          if (i < splitted.length) {
             (function (line, index) {
               setTimeout(function () {
                 resize(line, container)
